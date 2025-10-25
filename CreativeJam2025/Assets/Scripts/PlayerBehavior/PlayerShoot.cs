@@ -51,9 +51,20 @@ public class PlayerShoot : MonoBehaviour
     private void ShootProjectile(Transform spawnTransform, GameObject projectileObj)
     {
         GameObject projectile = Instantiate(projectileObj, spawnTransform.position, Quaternion.identity);
-        //set direction to where the player is looking
-        Vector3 dir = Camera.main.transform.forward;
-        projectile.GetComponent<Rigidbody>().linearVelocity = dir * projectileSpeed;
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        Vector3 targetPoint;
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
+        {
+            targetPoint = hit.point;
+        }
+        else
+        {
+            targetPoint = ray.GetPoint(1000f);
+        }
+        Vector3 dir = (targetPoint - spawnTransform.position).normalized;
+        rb.linearVelocity = dir * projectileSpeed;
 
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class IceProjectile : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         Destroy(gameObject);
     }

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 move;
     private Vector3 playerVel;
     public bool grounded;
+    public bool stopMoving = false;
 
     private void Start()
     {
@@ -31,12 +32,20 @@ public class PlayerMovement : MonoBehaviour
         move = input.actions["Move"].ReadValue<Vector2>();
         //if not locked on, move normally, if locked on, move perpinduclar to target
         Vector3 moveDirection = Vector3.zero;
-        moveDirection = (transform.right * move.x + transform.forward * move.y).normalized;
+        if (!stopMoving)
+        {
+            moveDirection = (transform.right * move.x + transform.forward * move.y).normalized;
+        }
+        else
+        {
+            moveDirection = Vector3.zero;
+        }
+        
 
         controller.Move(moveDirection * playerSpeed * Time.deltaTime);
 
         //jump logic
-        if (grounded && input.actions["Jump"].triggered)
+        if (grounded && input.actions["Jump"].triggered && !stopMoving)
         {
             playerVel.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
