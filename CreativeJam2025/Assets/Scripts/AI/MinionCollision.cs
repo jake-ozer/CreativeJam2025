@@ -7,12 +7,12 @@ public class MinionCollision : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerHealth>() != null)
         {
             collision.gameObject.GetComponent<PlayerHealth>().LoseHeart();
-            Destroy(this.gameObject);
+            Destroy(this.gameObject.transform.root.gameObject);
         }
 
         if (collision.gameObject.GetComponent<FireballProjectile>() != null || collision.gameObject.GetComponent<IceProjectile>() != null)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject.transform.root.gameObject);
         }
     }
 }

@@ -11,6 +11,9 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float shootCooldown;
     [SerializeField] private Transform staffSpawnTransform;
     [SerializeField] private float projectileSpeed;
+    [SerializeField] private AudioClip fireballSound;
+    [SerializeField] private AudioClip iceballSound;
+    [SerializeField] private AudioClip chargeSound;
     private PlayerInput input;
     private float cooldownTimer = 0;
 
@@ -25,12 +28,14 @@ public class PlayerShoot : MonoBehaviour
 
         if (input.actions["ShootFire"].triggered && cooldownTimer < 0)
         {
+            GetComponent<AudioSource>().PlayOneShot(chargeSound);
             staffAnim.SetTrigger("ShootFire");
             cooldownTimer = shootCooldown;
         }
 
         if (input.actions["ShootIce"].triggered && cooldownTimer < 0)
         {
+            GetComponent<AudioSource>().PlayOneShot(chargeSound);
             staffAnim.SetTrigger("ShootIce");
             cooldownTimer = shootCooldown;
         }
@@ -39,12 +44,14 @@ public class PlayerShoot : MonoBehaviour
     //called by animation event
     public void ShootFireball()
     {
+        GetComponent<AudioSource>().PlayOneShot(fireballSound);
         ShootProjectile(staffSpawnTransform, fireProjectile);
     }
 
     //called by animation event
     public void ShootIceBall()
     {
+        GetComponent<AudioSource>().PlayOneShot(iceballSound);
         ShootProjectile(staffSpawnTransform, iceProjectile);
     }
 

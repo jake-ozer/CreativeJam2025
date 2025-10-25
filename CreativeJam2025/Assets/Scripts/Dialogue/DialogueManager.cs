@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private PlayerInput input;
     [SerializeField] private float timeTillNextChar = 0.03f;
+    [SerializeField] private AudioClip enterDialogueSound;
+    [SerializeField] private AudioClip forwardDialogueSound;
 
     private bool isTyping = false;
     private bool skipTyping = false;
@@ -22,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator PlayListOfDialogueRoutine(string[] sentences)
     {
+        GetComponent<AudioSource>().PlayOneShot(enterDialogueSound);
         dialogueCanvasObj.SetActive(true);
         input.gameObject.GetComponent<PlayerState>().ChangePlayerState(PlayerState.PlayerStateEnum.Dormant);
 
@@ -33,6 +36,7 @@ public class DialogueManager : MonoBehaviour
             waitingForNext = true;
             yield return new WaitUntil(() => input.actions["ForwardDialogue"].triggered);
             yield return new WaitUntil(() => input.actions["ForwardDialogue"].IsPressed());
+            GetComponent<AudioSource>().PlayOneShot(forwardDialogueSound);
             waitingForNext = false;
         }
 
