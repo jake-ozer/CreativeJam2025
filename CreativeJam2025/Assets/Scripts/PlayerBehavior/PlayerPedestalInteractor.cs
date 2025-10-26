@@ -51,6 +51,8 @@ public class PlayerPedestalInteractor : MonoBehaviour
 
     private void TransferOrbToPedestal(Pedestal pedestal)
     {
+        pedestal.pedestalOrb = GetComponent<PlayerOrbController>().currentlyHeldOrb;
+        GetComponent<PlayerOrbController>().currentlyHeldOrb.GetComponent<Orb>().orbCanvas.SetActive(false);
         GetComponent<PlayerOrbController>().currentlyHeldOrb.gameObject.transform.parent = pedestal.transform.Find("OrbTransform");
         GetComponent<PlayerOrbController>().currentlyHeldOrb.gameObject.transform.localPosition = Vector3.zero;
         GetComponent<PlayerOrbController>().isHoldingOrb = false;

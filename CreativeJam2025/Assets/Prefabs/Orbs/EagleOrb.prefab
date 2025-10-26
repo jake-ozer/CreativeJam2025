@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EagleOrb
       objectReference: {fileID: 0}
+    - target: {fileID: 8101832134709854999, guid: d9448df7bd878104989b2df4bb2f3b46, type: 3}
+      propertyPath: m_TagString
+      value: EagleOrb
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

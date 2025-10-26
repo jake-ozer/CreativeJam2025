@@ -30,5 +30,10 @@ public class CyclopsHealth : MonoBehaviour
             curHealth -= dmg;
         }
         healthSlider.value = curHealth;
+
+        if(curHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedestalTransforms: []
   stoneMoveClip: {fileID: 8300000, guid: 298bb445c74209841a91cc0b99b55c85, type: 3}
+  correctAnswerIndex: 2
+  canSpin: 1
   speed: 0.001
 --- !u!65 &4873210542773507054
 BoxCollider:

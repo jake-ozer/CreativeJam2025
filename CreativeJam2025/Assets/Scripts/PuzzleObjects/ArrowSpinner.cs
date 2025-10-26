@@ -9,7 +9,7 @@ public class ArrowSpinner : MonoBehaviour
     private Transform cachedFromTransform;
     private int transIndex;
     [SerializeField] private AudioClip stoneMoveClip;
-    [SerializeField] private Transform correctAnswer;
+    [SerializeField] private int correctAnswerIndex;
     public bool canSpin = true;
 
     public float speed = 0.01f;
@@ -60,6 +60,6 @@ public class ArrowSpinner : MonoBehaviour
 
     public bool IsCorrectAnswer()
     {
-        return pedestalTransforms[transIndex] == correctAnswer;
+        return transIndex == correctAnswerIndex;
     }
 }
