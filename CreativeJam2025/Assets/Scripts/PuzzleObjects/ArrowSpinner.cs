@@ -9,6 +9,8 @@ public class ArrowSpinner : MonoBehaviour
     private Transform cachedFromTransform;
     private int transIndex;
     [SerializeField] private AudioClip stoneMoveClip;
+    [SerializeField] private Transform correctAnswer;
+    public bool canSpin = true;
 
     public float speed = 0.01f;
     float timeCount = 0.0f;
@@ -37,10 +39,13 @@ public class ArrowSpinner : MonoBehaviour
 
     public void SwitchPedestal()
     {
-        GetComponent<AudioSource>().PlayOneShot(stoneMoveClip);
-        cachedFromTransform = this.transform;
-        transIndex = (transIndex < pedestalTransforms.Count - 1) ? transIndex+1 : 0;
-        curTargetTransform = pedestalTransforms[transIndex];
+        if (canSpin)
+        {
+            GetComponent<AudioSource>().PlayOneShot(stoneMoveClip);
+            cachedFromTransform = this.transform;
+            transIndex = (transIndex < pedestalTransforms.Count - 1) ? transIndex + 1 : 0;
+            curTargetTransform = pedestalTransforms[transIndex];
+        }  
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -51,5 +56,10 @@ public class ArrowSpinner : MonoBehaviour
             //Debug.Log("switching pedestal");
             SwitchPedestal();
         }
+    }
+
+    public bool IsCorrectAnswer()
+    {
+        return pedestalTransforms[transIndex] == correctAnswer;
     }
 }
