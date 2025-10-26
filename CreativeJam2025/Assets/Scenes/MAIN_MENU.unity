@@ -803,6 +803,91 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &2065673969
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 46.330143
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.20809
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 100.74553
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.13052863
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9914445
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -165
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 718193872720482655, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bdb0368a626d96349a2ae02224197f6a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_Name
+      value: Mutant Breathing Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274316343004466485, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9145548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274316343004466485, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.9770737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274316343004466485, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.145076
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3bf550f3e79a6554f8354e4f2ee4f1b2, type: 3}
 --- !u!4 &2082731492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c74f2d522ce7dc408a8bfa1fe0e9463, type: 3}
@@ -819,3 +904,4 @@ SceneRoots:
   - {fileID: 439215797}
   - {fileID: 357170723}
   - {fileID: 1821715376}
+  - {fileID: 2065673969}
