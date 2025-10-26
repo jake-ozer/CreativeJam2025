@@ -23,7 +23,7 @@ public class CyclopsHealth : MonoBehaviour
 
         if (shieldActive)
         {
-            curHealth -= 0.1f;
+            curHealth -= 0.2f;
         }
         else 
         {

@@ -9,7 +9,7 @@ public class FireballProjectile : MonoBehaviour
     {
         if (collision.gameObject.transform.root.gameObject.GetComponent<CyclopsHealth>() != null)
         {
-            collision.gameObject.transform.root.gameObject.GetComponent<CyclopsHealth>().TakeDamage(dmg);
+            //collision.gameObject.transform.root.gameObject.GetComponent<CyclopsHealth>().TakeDamage(dmg);
         }
         GetComponent<AudioSource>().PlayOneShot(impact);
         this.gameObject.GetComponent<Collider>().enabled = false;
